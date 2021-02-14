@@ -1,6 +1,5 @@
-// Assignment code here
-
-// veriable for 4 upper case here
+// Arreys for special charactors
+// variable for uppercase
 var upperCase = [
   "A",
   "B",
@@ -29,7 +28,6 @@ var upperCase = [
   "Y",
   "Z"
 ];
-console.log(upperCase)
 
 //varible for lower case here
 var lowerCase = [
@@ -60,7 +58,6 @@ var lowerCase = [
   "y",
   "z"
 ];
-console.log(lowerCase)
 
 // variable for numbers here
 var Numbers = [
@@ -75,7 +72,6 @@ var Numbers = [
   "8",
   "9",
 ];
-console.log(Numbers)
 
 // variable for special charactor here
 var symbols = [
@@ -98,40 +94,34 @@ var symbols = [
   "~",
   "|",
 ];
-console.log(symbols)
 
-var passwordField = []
 
 // create a function ask the user which options they want to inclued.
+var passwordField = []
+// generatePassword function
 function generatePassword() {
-
   // variable to store user choice for password length.
   var passwordlength = parseInt(
-    prompt("How many charactors do you want in your password please choose a number between 8 and 128") // put a string in here
+    prompt("How many charactors do you want in your password? Please choose a number between 8 and 128!") 
+   );
 
-  );
-  // conditional statment to check if the password length is a number.                 ??????
-
-  // conditional statement to check if the password is at least 8 charetors long.
+ // conditional statement to check if the password is at least 8 charetors long.
   if (passwordlength < 8 || passwordlength > 128) {
-    alert("please enter between 8 and 128 charactors.");
+    alert("Please enter between 8 and 128 charactors!");
     return generatePassword()
-
   };
-  var storedUpperCase = confirm("Do you want to use Uppercase")
 
+  // variables with prompts yes and no
+  var storedUpperCase = confirm("Do you want to use Uppercase Charactors?")
+  var storedLowerCase = confirm("Do you want to use Lowercase Charactors?")
+  var storedNumbers = confirm("Do you want to use Numbers?")
+  var storedsymbols = confirm("Do you want to use Special Symbols?")
 
-  var storedLowerCase = confirm("Do you want to use Lowercase")
-
-
-  var storedNumbers = confirm("Do you want to use Numbers")
-
-
-  var storedsymbols = confirm("Do you want to use specialsymbols")
-
+  // if else statments
   if (storedLowerCase) {
     passwordField.push(lowerCase)
   }
+
   if (storedUpperCase) {
     passwordField.push(upperCase)
   }
@@ -146,16 +136,17 @@ function generatePassword() {
   var passwordField2 = passwordField.flat();
 
   let output = "";
+
   for (let i = 0; i < passwordlength; i++) {
     output += passwordField2[Math.floor(Math.random() * passwordField2.length)];
 
   }
+// empty password fields (local)
   passwordField = [];
   passwordField2 = [];
 
   return output
 }
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -168,6 +159,5 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
