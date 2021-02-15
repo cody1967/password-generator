@@ -2,13 +2,13 @@
 
 **This page will make you a randomized password**
 
-*Link* [Generate-Password](www.******.com"Generate-Password")
+*Link* [Generate-Password](https://cody1967.github.io/password-generator/"Generate-Password")
 
 ---
 
 #Main-Page 
 
-![ScreenShot#1]()
+![ScreenShot#1](../assets/images/screenshot#1.png)
 
 .1 If you click on the Generate password button a prompt displays. 
 
@@ -58,7 +58,7 @@
 
 
 
-
+---
 
 
 ### Written by Cody McNeill
