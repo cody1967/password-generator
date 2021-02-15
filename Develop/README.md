@@ -2,7 +2,7 @@
 
 **This page will make you a randomized password**
 
-*Link* [Generate-Password]()
+*Link* [Generate-Password](https://cody1967.github.io/password-generator/)
 
 ---
 
